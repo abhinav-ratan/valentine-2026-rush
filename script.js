@@ -2,74 +2,76 @@ const config = window.VALENTINE_CONFIG;
 
 document.title = config.pageTitle;
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById('valentineTitle')
+document.getElementById("title")
 .textContent = config.valentineName;
 
-document.getElementById('question1Text')
+document.getElementById("q1")
 .textContent = config.questions.first.text;
 
-document.getElementById('yesBtn1')
+document.getElementById("yes1")
 .textContent = config.questions.first.yesBtn;
 
-document.getElementById('noBtn1')
+document.getElementById("no1")
 .textContent = config.questions.first.noBtn;
 
-document.getElementById('question2Text')
+document.getElementById("q2")
 .textContent = config.questions.second.text;
 
-document.getElementById('yesBtn2')
+document.getElementById("yes2")
 .textContent = config.questions.second.yesBtn;
 
-document.getElementById('noBtn2')
+document.getElementById("no2")
 .textContent = config.questions.second.noBtn;
 
-document.getElementById('meterText')
+document.getElementById("meterQ")
 .textContent = config.questions.meter.text;
 
-document.getElementById('startText')
+document.getElementById("meterText")
 .textContent = config.questions.meter.startText;
 
-document.getElementById('nextBtn')
+document.getElementById("nextBtn")
 .textContent = config.questions.meter.nextBtn;
 
 });
 
-function showNextQuestion(n) {
-document.querySelectorAll('.question-section')
-.forEach(q => q.classList.add('hidden'));
+function nextPage(n){
 
-document.getElementById(`question${n}`)
-.classList.remove('hidden');
+document.querySelectorAll(".page")
+.forEach(p => p.classList.add("hidden"));
+
+document.getElementById("page"+n)
+.classList.remove("hidden");
 }
 
-function moveButton(btn) {
+function moveButton(btn){
+
 btn.style.position = "absolute";
-btn.style.left = Math.random()*80+"%";
-btn.style.top = Math.random()*80+"%";
+btn.style.left = Math.random()*80 + "%";
+btn.style.top = Math.random()*80 + "%";
 }
 
-const loveMeter = document.getElementById('loveMeter');
-const loveValue = document.getElementById('loveValue');
+const meter = document.getElementById("meter");
+const meterValue = document.getElementById("meterValue");
 
-if(loveMeter){
-loveMeter.addEventListener('input',()=>{
-loveValue.textContent = loveMeter.value;
+if(meter){
+meter.addEventListener("input",()=>{
+meterValue.textContent = meter.value;
 });
 }
 
-function celebrate(){
+function showFinal(){
 
-document.querySelectorAll('.question-section')
-.forEach(q=>q.classList.add('hidden'));
+document.querySelectorAll(".page")
+.forEach(p => p.classList.add("hidden"));
 
-const page = document.getElementById('celebration');
-page.classList.remove('hidden');
+document.getElementById("final")
+.classList.remove("hidden");
 
-document.getElementById('celebrationTitle')
+document.getElementById("finalTitle")
 .textContent = config.celebration.title;
 
-document.getElementById('celebrationMessage')
+document.getElementById("finalMessage")
 .textContent = config.celebration.message;
 }
