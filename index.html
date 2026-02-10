@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +11,10 @@
 
 <body>
 
-<!-- Background Music -->
+<!-- YouTube Background Music -->
 <iframe width="0" height="0"
 src="https://www.youtube.com/embed/qZyxrNkrL-0?autoplay=1&loop=1&playlist=qZyxrNkrL-0"
+frameborder="0"
 allow="autoplay">
 </iframe>
 
@@ -24,54 +24,57 @@ allow="autoplay">
 
 <!-- PAGE 1 -->
 <div class="page" id="page1">
-
-<h2 id="q1"></h2>
-
-<button onclick="nextPage(2)" id="yes1"></button>
-<button onclick="moveButton(this)" id="no1"></button>
-
+<h2>Will you be my valentine this year?</h2>
+<button onclick="nextPage(2)">Yes</button>
+<button onclick="moveButton(this)">No</button>
 </div>
 
 <!-- PAGE 2 -->
 <div class="page hidden" id="page2">
-
-<h2 id="q2"></h2>
-
-<button onclick="nextPage(3)" id="yes2"></button>
-<button onclick="moveButton(this)" id="no2"></button>
-
+<h2>Will you be my valentine forever?</h2>
+<button onclick="nextPage(3)">Yes</button>
+<button onclick="moveButton(this)">No</button>
 </div>
 
-<!-- LOVE METER -->
+<!-- PAGE 3 LOVE METER -->
 <div class="page hidden" id="page3">
 
-<h2 id="meterQ"></h2>
+<h2>How much do you love me?</h2>
 
-<input type="range" min="0" max="10000"
-value="100" id="meter">
+<input type="range" min="0" max="100" value="50"
+class="slider" id="loveMeter">
 
-<p>
-<span id="meterText"></span>
-(<span id="meterValue">100</span>%)
-</p>
+<p id="loveValue">50%</p>
 
-<button onclick="showFinal()" id="nextBtn"></button>
+<button onclick="nextPage(4)">Next</button>
 
 </div>
 
-<!-- FINAL LETTER -->
-<div class="page hidden" id="final">
+<!-- FINAL PAGE -->
+<div class="page hidden" id="page4">
 
-<h2 id="finalTitle"></h2>
+<h2 class="letter">
 
-<p id="finalMessage" class="letter"></p>
+Rashmi, mon petit cherie<br><br>
+
+I thought it mattered what I said or where I said it.
+Then I realized the only thing that matters is that you,
+you make me happier than I ever thought I could be,
+and if you let me, I will spend the rest of my life
+trying to make you feel the same way.<br><br>
+
+I love you Rashmi &lt;3, you are my one!<br><br>
+
+I can't wait to spend our first valentine's day together,
+and every other to come!
+
+</h2>
 
 </div>
 
 </div>
 
 <script src="config.js"></script>
-<script src="theme.js"></script>
 <script src="script.js"></script>
 
 </body>
