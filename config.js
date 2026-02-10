@@ -3,6 +3,7 @@
 // ============================================
 
 const CONFIG = {
+
     valentineName: "Rush",
 
     pageTitle: "Will you be my valentine? 💜",
@@ -58,7 +59,6 @@ const CONFIG = {
         heartExplosionSize: 1.5
     },
 
-    // Disable template music player since we use YouTube
     music: {
         enabled: false,
         autoplay: false,
