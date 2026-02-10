@@ -1,20 +1,12 @@
-:root {
---bg1:#E6E6FA;
---bg2:#D8BFD8;
---btn:#6A0DAD;
---btnHover:#5A009D;
---text:#4B0082;
-}
-
 body{
 margin:0;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,var(--bg1),var(--bg2));
+background:linear-gradient(135deg,#E6E6FA,#D8BFD8);
 font-family:Arial;
-color:var(--text);
+color:#4B0082;
 }
 
 .container{
@@ -27,7 +19,7 @@ max-width:600px;
 }
 
 button{
-background:var(--btn);
+background:#6A0DAD;
 color:white;
 border:none;
 padding:12px 24px;
@@ -38,7 +30,7 @@ font-size:16px;
 }
 
 button:hover{
-background:var(--btnHover);
+background:#5A009D;
 }
 
 .hidden{
@@ -47,10 +39,8 @@ display:none;
 
 .slider{
 width:100%;
-margin-top:20px;
 }
 
 .letter{
 line-height:1.6;
-font-weight:500;
 }
