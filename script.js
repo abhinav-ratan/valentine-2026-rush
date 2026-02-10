@@ -1,77 +1,34 @@
 const config = window.VALENTINE_CONFIG;
 
-document.title = config.pageTitle;
+document.getElementById("title").innerText =
+config.valentineName + ", my love";
 
-window.addEventListener("DOMContentLoaded", () => {
-
-document.getElementById("title")
-.textContent = config.valentineName;
-
-document.getElementById("q1")
-.textContent = config.questions.first.text;
-
-document.getElementById("yes1")
-.textContent = config.questions.first.yesBtn;
-
-document.getElementById("no1")
-.textContent = config.questions.first.noBtn;
-
-document.getElementById("q2")
-.textContent = config.questions.second.text;
-
-document.getElementById("yes2")
-.textContent = config.questions.second.yesBtn;
-
-document.getElementById("no2")
-.textContent = config.questions.second.noBtn;
-
-document.getElementById("meterQ")
-.textContent = config.questions.meter.text;
-
-document.getElementById("meterText")
-.textContent = config.questions.meter.startText;
-
-document.getElementById("nextBtn")
-.textContent = config.questions.meter.nextBtn;
-
-});
-
-function nextPage(n){
+function nextPage(pageNumber) {
 
 document.querySelectorAll(".page")
 .forEach(p => p.classList.add("hidden"));
 
-document.getElementById("page"+n)
+document.getElementById("page" + pageNumber)
 .classList.remove("hidden");
+
 }
 
-function moveButton(btn){
+function moveButton(btn) {
+
+const x = Math.random() * 80;
+const y = Math.random() * 80;
 
 btn.style.position = "absolute";
-btn.style.left = Math.random()*80 + "%";
-btn.style.top = Math.random()*80 + "%";
+btn.style.left = x + "%";
+btn.style.top = y + "%";
+
 }
 
-const meter = document.getElementById("meter");
-const meterValue = document.getElementById("meterValue");
+const meter = document.getElementById("loveMeter");
+const value = document.getElementById("loveValue");
 
 if(meter){
-meter.addEventListener("input",()=>{
-meterValue.textContent = meter.value;
-});
-}
-
-function showFinal(){
-
-document.querySelectorAll(".page")
-.forEach(p => p.classList.add("hidden"));
-
-document.getElementById("final")
-.classList.remove("hidden");
-
-document.getElementById("finalTitle")
-.textContent = config.celebration.title;
-
-document.getElementById("finalMessage")
-.textContent = config.celebration.message;
+meter.oninput = () => {
+value.innerText = meter.value + "%";
+};
 }
