@@ -4,18 +4,12 @@ const CONFIG = {
 
     pageTitle: "Will you be my valentine?",
 
-    floatingEmojis: {
-        hearts: [],
-        bears: []
-    },
-
     questions: {
 
         first: {
             text: "Will you be my valentine this year?",
             yesBtn: "Yes",
-            noBtn: "No",
-            secretAnswer: "I love you"
+            noBtn: "No"
         },
 
         second: {
@@ -27,15 +21,15 @@ const CONFIG = {
         meter: {
             text: "How much do you love me?",
             startText: "This much!",
-            nextBtn: "Next"
+            nextBtn: "Continue"
         }
     },
 
     celebration: {
         title: "Rashmi, mon petit cherie",
-        message: `I thought it mattered what I said or where I said it. 
-Then I realized the only thing that matters is that you, you make me happier than I ever thought I could be, 
-and if you let me, I will spend the rest of my life trying to make you feel the same way.
+
+        message:
+`I thought it mattered what I said or where I said it. Then I realized the only thing that matters is that you, you make me happier than I ever thought I could be, and if you let me, I will spend the rest of my life trying to make you feel the same way.
 
 I love you Rashmi <3, you are my one!
 
@@ -48,17 +42,6 @@ I can't wait to spend our first valentine's day together, and every other to com
         buttonBackground: "#6A0DAD",
         buttonHover: "#5A0099",
         textColor: "#4B0082"
-    },
-
-    animations: {
-        floatDuration: "0s",
-        floatDistance: "0px",
-        bounceSpeed: "0.5s",
-        heartExplosionSize: 1
-    },
-
-    music: {
-        enabled: false
     }
 };
 
