@@ -4,31 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Will you be my valentine? 💜</title>
+<title>Will you be my valentine?</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- 🎵 Background Music -->
-<div style="position: fixed; bottom: 10px; right: 10px; z-index: 999;">
+<!-- Background Music -->
+<div style="position: fixed; bottom: 10px; right: 10px;">
 <iframe width="0" height="0"
 src="https://www.youtube.com/embed/qZyxrNkrL-0?autoplay=1&loop=1&playlist=qZyxrNkrL-0"
-frameborder="0" allow="autoplay">
+allow="autoplay">
 </iframe>
 </div>
-
-<div class="floating-elements"></div>
 
 <div class="container">
 
 <h1 id="valentineTitle"></h1>
 
-<!-- Question 1 -->
+<!-- PAGE 1 -->
 <div class="question-section" id="question1">
-
 <h2 id="question1Text"></h2>
 
 <button class="cute-btn"
@@ -38,65 +34,48 @@ id="yesBtn1"></button>
 <button class="cute-btn"
 onclick="moveButton(this)"
 id="noBtn1"></button>
-
-<div class="secret-answer">
-<button class="cute-btn special"
-onclick="showNextQuestion(2)"
-id="secretAnswerBtn"></button>
 </div>
 
-</div>
-
-<!-- Question 2 -->
+<!-- PAGE 2 -->
 <div class="question-section hidden" id="question2">
-
 <h2 id="question2Text"></h2>
+
+<button class="cute-btn"
+onclick="showNextQuestion(3)"
+id="yesBtn2"></button>
+
+<button class="cute-btn"
+onclick="moveButton(this)"
+id="noBtn2"></button>
+</div>
+
+<!-- LOVE METER PAGE -->
+<div class="question-section hidden" id="question3">
+
+<h2 id="meterText"></h2>
 
 <div class="love-meter">
 <input type="range" min="0" max="10000" value="100"
 class="slider" id="loveMeter">
 
 <p>
-<span class="love-value-container">
 <span id="startText"></span>
 (<span id="loveValue">100</span>%)
-</span>
-
-<span id="extraLove" class="hidden"></span>
 </p>
 </div>
 
 <button class="cute-btn"
-onclick="showNextQuestion(3)"
+onclick="celebrate()"
 id="nextBtn"></button>
 
 </div>
 
-<!-- Question 3 -->
-<div class="question-section hidden" id="question3">
-
-<h2 id="question3Text"></h2>
-
-<button class="cute-btn final-yes"
-onclick="celebrate()"
-id="yesBtn3"></button>
-
-<button class="cute-btn"
-onclick="moveButton(this)"
-id="noBtn3"></button>
-
-</div>
-
-<!-- Celebration -->
+<!-- FINAL LETTER PAGE -->
 <div class="celebration hidden" id="celebration">
 
 <h2 id="celebrationTitle"></h2>
 
-<p class="celebration-text"
-id="celebrationMessage"></p>
-
-<p class="celebration-text"
-id="celebrationEmojis"></p>
+<p class="letter" id="celebrationMessage"></p>
 
 </div>
 
