@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Will you be my valentine?</title>
 
 <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
 
-<!-- YouTube Background Music -->
-<iframe width="0" height="0"
+<!-- Background Music (Click-safe) -->
+<iframe
 src="https://www.youtube.com/embed/qZyxrNkrL-0?autoplay=1&loop=1&playlist=qZyxrNkrL-0"
-frameborder="0"
-allow="autoplay">
+allow="autoplay"
+style="position:fixed;width:0;height:0;border:0;pointer-events:none;">
 </iframe>
 
 <div class="container">
@@ -25,6 +27,7 @@ allow="autoplay">
 <!-- PAGE 1 -->
 <div class="page" id="page1">
 <h2>Will you be my valentine this year?</h2>
+
 <button onclick="nextPage(2)">Yes</button>
 <button onclick="moveButton(this)">No</button>
 </div>
@@ -32,25 +35,26 @@ allow="autoplay">
 <!-- PAGE 2 -->
 <div class="page hidden" id="page2">
 <h2>Will you be my valentine forever?</h2>
+
 <button onclick="nextPage(3)">Yes</button>
 <button onclick="moveButton(this)">No</button>
 </div>
 
-<!-- PAGE 3 LOVE METER -->
+<!-- LOVE METER -->
 <div class="page hidden" id="page3">
 
 <h2>How much do you love me?</h2>
 
-<input type="range" min="0" max="100" value="50"
-class="slider" id="loveMeter">
+<input type="range" min="0" max="100"
+value="50" id="meter">
 
-<p id="loveValue">50%</p>
+<p id="value">50%</p>
 
 <button onclick="nextPage(4)">Next</button>
 
 </div>
 
-<!-- FINAL PAGE -->
+<!-- FINAL LETTER -->
 <div class="page hidden" id="page4">
 
 <h2 class="letter">
