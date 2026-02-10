@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,70 +13,58 @@
 <body>
 
 <!-- Background Music -->
-<div style="position: fixed; bottom: 10px; right: 10px;">
 <iframe width="0" height="0"
 src="https://www.youtube.com/embed/qZyxrNkrL-0?autoplay=1&loop=1&playlist=qZyxrNkrL-0"
 allow="autoplay">
 </iframe>
-</div>
 
 <div class="container">
 
-<h1 id="valentineTitle"></h1>
+<h1 id="title"></h1>
 
 <!-- PAGE 1 -->
-<div class="question-section" id="question1">
-<h2 id="question1Text"></h2>
+<div class="page" id="page1">
 
-<button class="cute-btn"
-onclick="showNextQuestion(2)"
-id="yesBtn1"></button>
+<h2 id="q1"></h2>
 
-<button class="cute-btn"
-onclick="moveButton(this)"
-id="noBtn1"></button>
+<button onclick="nextPage(2)" id="yes1"></button>
+<button onclick="moveButton(this)" id="no1"></button>
+
 </div>
 
 <!-- PAGE 2 -->
-<div class="question-section hidden" id="question2">
-<h2 id="question2Text"></h2>
+<div class="page hidden" id="page2">
 
-<button class="cute-btn"
-onclick="showNextQuestion(3)"
-id="yesBtn2"></button>
+<h2 id="q2"></h2>
 
-<button class="cute-btn"
-onclick="moveButton(this)"
-id="noBtn2"></button>
+<button onclick="nextPage(3)" id="yes2"></button>
+<button onclick="moveButton(this)" id="no2"></button>
+
 </div>
 
-<!-- LOVE METER PAGE -->
-<div class="question-section hidden" id="question3">
+<!-- LOVE METER -->
+<div class="page hidden" id="page3">
 
-<h2 id="meterText"></h2>
+<h2 id="meterQ"></h2>
 
-<div class="love-meter">
-<input type="range" min="0" max="10000" value="100"
-class="slider" id="loveMeter">
+<input type="range" min="0" max="10000"
+value="100" id="meter">
 
 <p>
-<span id="startText"></span>
-(<span id="loveValue">100</span>%)
+<span id="meterText"></span>
+(<span id="meterValue">100</span>%)
 </p>
-</div>
 
-<button class="cute-btn"
-onclick="celebrate()"
-id="nextBtn"></button>
+<button onclick="showFinal()" id="nextBtn"></button>
 
 </div>
 
-<!-- FINAL LETTER PAGE -->
-<div class="celebration hidden" id="celebration">
+<!-- FINAL LETTER -->
+<div class="page hidden" id="final">
 
-<h2 id="celebrationTitle"></h2>
+<h2 id="finalTitle"></h2>
 
-<p class="letter" id="celebrationMessage"></p>
+<p id="finalMessage" class="letter"></p>
 
 </div>
 
